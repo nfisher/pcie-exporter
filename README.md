@@ -62,6 +62,20 @@ docker run --rm -p 9808:9808 \
 - `pcie_exporter_last_scrape_duration_seconds` gauge
 - `pcie_exporter_last_scrape_success` gauge
 
+## PCIe Throughput Map
+
+The repository includes a version/lane throughput map at `internal/pcie/bandwidth_map.go`.
+
+These are theoretical single-direction values and account for line encoding only.
+
+| PCIe Version | Transfer Rate / lane (GT/s) | x1 (GB/s) | x2 (GB/s) | x4 (GB/s) | x8 (GB/s) | x16 (GB/s) |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1.0 | 2.5 | 0.250 | 0.500 | 1.000 | 2.000 | 4.000 |
+| 2.0 | 5.0 | 0.500 | 1.000 | 2.000 | 4.000 | 8.000 |
+| 3.0 | 8.0 | 0.985 | 1.969 | 3.938 | 7.877 | 15.754 |
+| 4.0 | 16.0 | 1.969 | 3.938 | 7.877 | 15.754 | 31.508 |
+| 5.0 | 32.0 | 3.938 | 7.877 | 15.754 | 31.508 | 63.015 |
+
 ## Testing
 
 Tests are fixture-driven and do not use mocks.
