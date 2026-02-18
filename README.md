@@ -49,7 +49,14 @@ docker run --rm -p 9808:9808 \
 ## HTTP Endpoints
 
 - `/metrics`: Prometheus text exposition
+- `/pcie-tree`: PCIe topology tree in JSON with `bus_id`, `name`, `link_capacity`, and `link_status`
 - `/healthz`: basic health probe (`200 ok`)
+
+Example:
+
+```bash
+curl -s http://127.0.0.1:9808/pcie-tree
+```
 
 ## Exported Metrics
 
