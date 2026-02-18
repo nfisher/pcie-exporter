@@ -1,0 +1,4 @@
+github.com/gogunit/gunit v0.0.0-20250207192523-dc5f6dd6548f h1:XH1rs2YcdfQB06lJ1G5bChSvEdKWqAmvPHUnD6MEKkI=
+github.com/gogunit/gunit v0.0.0-20250207192523-dc5f6dd6548f/go.mod h1:xn1K+Qfylrlwbm691iSLCYwVanfWnA45j/9wBkF4DO8=
+github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
+github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
