@@ -26,7 +26,7 @@ go build ./cmd/pcie-exporter
 ```bash
 ./pcie-exporter \
   -listen-address=:9808 \
-  -sysfs-root=/sys
+  -sysfs-root=/host/sysfs
 ```
 
 Configuration precedence for sysfs root:
@@ -36,6 +36,15 @@ Configuration precedence for sysfs root:
 3. default `/sys`
 
 This allows running in containers where sysfs is mounted at a non-default path.
+
+Container example:
+
+```bash
+docker run --rm -p 9808:9808 \
+  -v /sys:/host/sysfs:ro \
+  ghcr.io/your-org/pcie-exporter:latest \
+  -sysfs-root=/host/sysfs
+```
 
 ## HTTP Endpoints
 
@@ -67,6 +76,14 @@ go test ./...
 ```
 
 For best fidelity, replace/add fixtures with data captured from a live target system (host classes you care about most).
+
+Current priority target systems for fixture captures:
+
+- NVIDIA GB200
+- NVIDIA GB300
+- NVIDIA B300
+- NVIDIA H100
+- NVIDIA H200
 
 ## CI
 
