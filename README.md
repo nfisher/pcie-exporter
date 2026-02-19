@@ -42,7 +42,7 @@ Container example:
 ```bash
 docker run --rm -p 9808:9808 \
   -v /sys:/host/sysfs:ro \
-  ghcr.io/your-org/pcie-exporter:latest \
+  ghcr.io/nfisher/pcie-exporter:latest \
   -sysfs-root=/host/sysfs
 ```
 

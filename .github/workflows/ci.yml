@@ -50,6 +50,8 @@ jobs:
     permissions:
       contents: read
       packages: write
+    env:
+      KO_DOCKER_REPO: ghcr.io/nfisher/pcie-exporter
     steps:
       - name: Checkout
         uses: actions/checkout@v4
